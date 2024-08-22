@@ -1,0 +1,14 @@
+@import '../../../../assets/styles/variables.scss';
+
+:host {
+
+    display: block;
+    font-size: .9rem;
+    padding: .4rem 1rem;
+
+    &[typeButton="btn-primary"] {
+        background: $unnamed-color-ffffff;
+        color: $unnamed-color-003262;
+        font-weight: 600;
+    }
+}
