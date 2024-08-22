@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 @font-face {
     font-family: 'Gibson';
     src: url('./assets/fonts/Gibson/Demo_Fonts/Fontspring-DEMO-gibson-regular.otf') format('otf');
