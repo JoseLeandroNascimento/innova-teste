@@ -1,0 +1,27 @@
+@import '../../../../assets/styles/variables.scss';
+
+:host {
+
+    nav {
+
+        display: flex;
+        justify-content: space-around;
+
+        .logos {}
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $unnamed-color-ffffff;
+                    font-family: 'Gibson', sans-serif;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
