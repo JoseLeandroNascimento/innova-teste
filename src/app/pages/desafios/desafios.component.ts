@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { DesafioCardComponent } from '../../shared/components/desafio-card/desafio-card.component';
 
 @Component({
   selector: 'app-desafios',
   standalone: true,
-  imports: [],
+  imports: [
+    DesafioCardComponent
+  ],
   templateUrl: './desafios.component.html',
   styleUrl: './desafios.component.scss'
 })
