@@ -4,19 +4,9 @@
 
     display: block;
 
-    ul.menu {
-        list-style: none;
-        display: flex;
-        gap: 1.2rem;
+    .btn-menu {
 
-        li {
-            a {
-                text-decoration: none;
-                color: $unnamed-color-ffffff;
-                font-family: 'Gibson', sans-serif;
-                font-size: .8rem;
-            }
-        }
+        background-color: $unnamed-color-42c0b6;
+        color: $unnamed-color-ffffff ;
     }
-
 }

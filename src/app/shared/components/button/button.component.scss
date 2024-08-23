@@ -11,4 +11,10 @@
         color: $unnamed-color-003262;
         font-weight: 600;
     }
+
+    &[typeButton="btn-secondary"] {
+        background: $unnamed-color-003262;
+        color: $unnamed-color-ffffff;
+        font-weight: 600;
+    }
 }

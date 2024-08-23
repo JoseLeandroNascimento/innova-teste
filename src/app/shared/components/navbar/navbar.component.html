@@ -1,12 +1,50 @@
-<nav class="flex justify-around items-center py-3">
+<nav class="flex md:justify-around justify-between items-center py-3">
     <div class="logo">
-        <img src="assets/imgs/logo_holambra_telescope.svg" alt="telescopico">
+        <img class="size-3/4 size-4/5" src="assets/imgs/logo_holambra_telescope.svg" alt="telescopico">
     </div>
-    <ul class="menu flex gap-1.5">
+    <ul class="menu hidden md:flex gap-4 text-white text-sm">
         <li><a href="">INCREVA-SE</a></li>
-        <li><a href="">DESAFIOS</a></li>
-        <li><a href="">CRONOGRAMA</a></li>
-        <li><a href="">PREMIAÇÃO</a></li>
+        <li><a href="#desafios">DESAFIOS</a></li>
+        <li><a href="#cronogramas">CRONOGRAMA</a></li>
+        <li><a href="#premiacao">PREMIAÇÃO</a></li>
         <li><a href="">REGULAMENTO</a></li>
     </ul>
+
+    <div class="flex md:hidden">
+        <button (click)="toggleMenu()" type="button"
+            class="btn-menu relative inline-flex items-center justify-center rounded-md p-2 text-gray-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            aria-controls="mobile-menu" [attr.aria-expanded]="isMenuOpen">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+
+            @if (!isMenuOpen) {
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            }@else{
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            }
+        </button>
+    </div>
 </nav>
+
+@if (isMenuOpen) {
+<div class="md:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+        <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-300 hover:text-white">INCREVA-SE</a>
+        <a href="#desafios"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-300 hover:text-white">DESAFIOS</a>
+        <a href="#cronogramas"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-300 hover:text-white">CRONOGRAMA</a>
+        <a href="#premiacao"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-300 hover:text-white">PREMIAÇÃO</a>
+        <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-slate-300 hover:text-white">REGULAMENTO</a>
+    </div>
+</div>
+}

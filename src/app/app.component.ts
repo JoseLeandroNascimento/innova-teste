@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DesafiosComponent } from "./pages/desafios/desafios.component";
+import { CronogramasComponent } from "./pages/cronogramas/cronogramas.component";
+import { PremiacaoComponent } from "./pages/premiacao/premiacao.component";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,9 @@ import { DesafiosComponent } from "./pages/desafios/desafios.component";
   imports: [
     RouterOutlet,
     HomeComponent,
-    DesafiosComponent
+    DesafiosComponent,
+    CronogramasComponent,
+    PremiacaoComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

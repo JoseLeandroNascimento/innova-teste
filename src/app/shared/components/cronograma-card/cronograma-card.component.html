@@ -1,0 +1,20 @@
+<div class="cronograma-card">
+    <span class="text-white font-bold periodo-label">
+        @if(endDate === undefined){
+        A partir de {{startDate | date:"dd/M"}}
+        }@else {
+
+        @if (startDate.getTime() === endDate.getTime()) {
+        {{startDate | date:"dd/M"}}
+        }@else {
+
+        De {{startDate | date:"dd/M"}} a {{endDate | date:"dd/M"}}
+
+        }
+        }
+    </span>
+    <p class="mt-5 text-white">
+        {{description}}
+    </p>
+
+</div>
