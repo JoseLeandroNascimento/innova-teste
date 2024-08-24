@@ -1,0 +1,9 @@
+@import '../../../assets/styles/variables.scss';
+
+:host {
+
+    .border-section {
+
+        border-top: 2px solid $unnamed-color-003262;
+    }
+}

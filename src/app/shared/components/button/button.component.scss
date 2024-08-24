@@ -17,4 +17,10 @@
         color: $unnamed-color-ffffff;
         font-weight: 600;
     }
+
+    &[typeButton="btn-success"] {
+        background: $unnamed-color-42c0b6;
+        color: $unnamed-color-ffffff ;
+        font-weight: 600;
+    }
 }

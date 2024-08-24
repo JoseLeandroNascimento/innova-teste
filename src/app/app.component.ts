@@ -4,6 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { DesafiosComponent } from "./pages/desafios/desafios.component";
 import { CronogramasComponent } from "./pages/cronogramas/cronogramas.component";
 import { PremiacaoComponent } from "./pages/premiacao/premiacao.component";
+import { InscricaoComponent } from "./pages/inscricao/inscricao.component";
+import { FooterComponent } from "./shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,9 @@ import { PremiacaoComponent } from "./pages/premiacao/premiacao.component";
     HomeComponent,
     DesafiosComponent,
     CronogramasComponent,
-    PremiacaoComponent
+    PremiacaoComponent,
+    InscricaoComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
