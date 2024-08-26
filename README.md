@@ -1,27 +1,51 @@
-# InnovaTeste
+# Teste - Desenvolvedor Front-End Jr
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Este repositório contém o projeto desenvolvido para o teste de Desenvolvedor Front-End Jr. A aplicação foi criada utilizando Angular 17 e estilizada com Tailwind CSS, conforme os requisitos estabelecidos.
 
-## Development server
+## Requisitos do Teste
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Criação do Repositório**
 
-## Code scaffolding
+   - O repositório foi criado e o desenvolvimento do projeto foi documentado através de commits organizados.
+   - O repositório foi compartilhado com o responsável pelo teste.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Tecnologias e Ferramentas**
 
-## Build
+   - O projeto foi desenvolvido com Angular na versão 17.
+   - Foi utilizado [Tailwind CSS](https://tailwindcss.com/) para a estilização da aplicação.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Interface**
 
-## Running unit tests
+   - A interface foi desenvolvida de acordo com o layout fornecido no link: [Layout Adobe XD](https://xd.adobe.com/view/1cf204a5-a446-4ac5-8e6d-690925097289-49a1/)
+   - As imagens necessárias foram utilizadas a partir do [link de imagens](https://host.aatb.com.br/temp/assets.zip).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Responsividade**
 
-## Running end-to-end tests
+   - A versão desktop da aplicação foi adaptada para mobile, garantindo uma experiência responsiva em dispositivos móveis.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. **Componentização**
 
-## Further help
+   - As seções da página foram divididas em componentes reutilizáveis para melhor organização e manutenção do código.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. **Formulário**
+
+   - O formulário foi implementado com validação dos campos utilizando JavaScript.
+   - A funcionalidade de autocomplete para os campos de endereço foi integrada utilizando a API [ViaCEP](https://viacep.com.br/), baseada no CEP fornecido pelo usuário.
+
+## Diferenciais
+
+- **Otimização de Desempenho**: Foram aplicadas práticas para garantir que a aplicação tenha um bom desempenho.
+- **Conhecimento de Práticas de SEO**: Práticas recomendadas de SEO foram implementadas para melhorar a visibilidade da aplicação nos motores de busca.
+- **Publicação do Projeto**: O projeto foi publicado em um ambiente de teste acessível para avaliação.
+
+## Acesso ao Site Publicado
+
+- **Site Publicado**: [Acesse a aplicação aqui](https://innova-teste-ormyvyaru.vercel.app/)
+
+## Instruções para Instalação e Execução
+
+1. **Clone o Repositório**
+
+   ```bash
+   git clone https://github.com/seu-usuario/teste-front-end-jr.git
+   cd teste-front-end-jr

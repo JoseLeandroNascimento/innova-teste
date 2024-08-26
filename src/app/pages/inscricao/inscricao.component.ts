@@ -52,9 +52,15 @@ export class InscricaoComponent implements OnInit {
 
     this.estadosOptions$ = this.localidadeService.getEstados();
 
+    this.form.controls.idCidade.disable();
+
     this.form.controls.idEstado.valueChanges.subscribe(idEstado => {
-      if (idEstado)
+      if (idEstado) {
         this.municipioOptions$ = this.localidadeService.getMunicipioPorEstado(+idEstado)
+        this.form.controls.idCidade.enable();
+      } else {
+        this.form.controls.idCidade.disable();
+      }
     })
 
     this.form.controls.cep.valueChanges.subscribe(cep => {
