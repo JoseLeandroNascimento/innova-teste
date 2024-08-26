@@ -20,3 +20,11 @@
 <footer>
     <app-footer />
 </footer>
+
+@if (isVisible) {
+<button (click)="scrollToTop()"
+    class="btn-top px-2 md:px-3 py-3 md:py-4 fixed z-3 bottom-4 md:bottom-52 right-2 md:right-10 rounded-sm cursor-pointer transition-opacity duration-300 ease-in-out">
+    <img src="assets/imgs/icon-top.svg" alt="icone top" class="size-4 md:size-5">
+</button>
+
+}

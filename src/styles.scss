@@ -16,3 +16,9 @@
     box-sizing: border-box;
     font-family: 'Gibson', sans-serif;
 }
+
+*,
+html {
+
+    scroll-behavior: smooth !important;
+}

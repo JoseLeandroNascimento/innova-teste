@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { DesafiosComponent } from "./pages/desafios/desafios.component";
 import { CronogramasComponent } from "./pages/cronogramas/cronogramas.component";
-import { PremiacaoComponent } from "./pages/premiacao/premiacao.component";
+import { DesafiosComponent } from "./pages/desafios/desafios.component";
+import { HomeComponent } from './pages/home/home.component';
 import { InscricaoComponent } from "./pages/inscricao/inscricao.component";
+import { PremiacaoComponent } from "./pages/premiacao/premiacao.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 
 @Component({
@@ -23,5 +23,24 @@ import { FooterComponent } from "./shared/components/footer/footer.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'innova-teste';
+
+  isVisible: boolean = false;
+
+  ngOnInit(): void {
+    this.checkScroll();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.checkScroll();
+  }
+
+  private checkScroll(): void {
+    const scrollPosition = window.scrollY;
+    this.isVisible = scrollPosition > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
