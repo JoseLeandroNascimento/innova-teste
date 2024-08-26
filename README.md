@@ -29,7 +29,7 @@ Este repositório contém o projeto desenvolvido para o teste de Desenvolvedor F
 
 6. **Formulário**
 
-   - O formulário foi implementado com validação dos campos utilizando JavaScript.
+   - O formulário foi implementado com validação dos campos utilizando o form reactive do angular.
    - A funcionalidade de autocomplete para os campos de endereço foi integrada utilizando a API [ViaCEP](https://viacep.com.br/), baseada no CEP fornecido pelo usuário.
 
 ## Diferenciais
