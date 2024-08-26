@@ -49,3 +49,7 @@ Este repositório contém o projeto desenvolvido para o teste de Desenvolvedor F
    ```bash
    git clone https://github.com/JoseLeandroNascimento/innova-teste.git
    cd teste-front-end-jr
+2. **Execultar aplicação**
+
+  ```bash
+     ng s
