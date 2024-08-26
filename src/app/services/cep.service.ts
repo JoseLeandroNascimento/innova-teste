@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { EnderecoResponse } from '../core/models/enderecoResponse';
 
 @Injectable({
@@ -16,6 +16,6 @@ export class CepService {
   ) { }
 
   public enderecoPorCep(cep: string): Observable<EnderecoResponse> {
-    return this.httpClient.get<EnderecoResponse>(`${this.urlApiIbge}${cep}/json`);
+    return this.httpClient.get<EnderecoResponse>(`${this.urlApiIbge}${cep}/json`).pipe(shareReplay(2))
   }
 }

@@ -1,0 +1,13 @@
+@import '../../../assets/styles/variables.scss';
+
+:host {
+
+    .descricao-secao {
+
+        strong {
+
+            font-weight: 500;
+            color: $unnamed-color-42c0b6;
+        }
+    }
+}

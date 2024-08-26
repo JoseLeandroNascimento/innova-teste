@@ -1,13 +1,13 @@
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgxMaskDirective } from 'ngx-mask';
 import { Observable, of } from 'rxjs';
 import { EstadoResponse } from '../../core/models/estadoResponse';
 import { MunicipioResponse } from '../../core/models/municipioResponse';
+import { CepService } from '../../services/cep.service';
 import { LocalidadeService } from '../../services/localidade.service';
 import { ButtonComponent } from '../../shared/components/button/button.component';
-import { CepService } from '../../services/cep.service';
 import { ErrorMessageComponent } from '../../shared/components/error-message/error-message.component';
 import { FormMessageErroCustom } from './messageErrorCustom';
 
@@ -91,6 +91,7 @@ export class InscricaoComponent implements OnInit {
 
     if (this.form.valid) {
 
+      console.log("Dados enviados com sucesso");
 
     } else {
 
