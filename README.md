@@ -47,5 +47,5 @@ Este repositório contém o projeto desenvolvido para o teste de Desenvolvedor F
 1. **Clone o Repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/teste-front-end-jr.git
+   git clone https://github.com/JoseLeandroNascimento/innova-teste.git
    cd teste-front-end-jr
