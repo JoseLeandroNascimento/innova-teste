@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-desafio-card',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './desafio-card.component.scss'
 })
 export class DesafioCardComponent {
+
+  @Input({ required: true }) img!: string;
+  @Input({ required: true }) title!: string;
+  @Input({ required: true }) options!: string[];
 
 }

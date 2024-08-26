@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { desafioResponse } from '../../core/models/desafioResponse.models';
+
 import { CronogramaCardComponent } from '../../shared/components/cronograma-card/cronograma-card.component';
+import { CronogramaResponse } from '../../core/models/cronogramaResponse.';
 
 @Component({
   selector: 'app-cronogramas',
@@ -13,7 +14,7 @@ import { CronogramaCardComponent } from '../../shared/components/cronograma-card
 })
 export class CronogramasComponent {
 
-  protected desafios: desafioResponse[] = [
+  protected cronogramas: CronogramaResponse[] = [
     {
       startDate: new Date(2024, 3, 19),
       endDate: new Date(2024, 3, 19),

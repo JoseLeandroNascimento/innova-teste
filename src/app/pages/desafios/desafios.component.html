@@ -7,9 +7,10 @@
     </p>
 
     <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-20 mt-10">
-        <app-desafio-card class="w-full"></app-desafio-card>
-        <app-desafio-card class="w-full"></app-desafio-card>
-        <app-desafio-card class="w-full"></app-desafio-card>
-        <app-desafio-card class="w-full"></app-desafio-card>
+
+        @for (item of desafios; track $index) {
+        <app-desafio-card class="w-full" [img]="item.img" [options]="item.options"
+            [title]="item.title"></app-desafio-card>
+        }
     </div>
 </section>

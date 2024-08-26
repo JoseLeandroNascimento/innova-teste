@@ -1,17 +1,16 @@
 <div class="flex flex-col">
     <div class="flex items-center gap-2">
-        <img src="assets/imgs/ico_desafio1.svg" alt="icone-desafio">
-        <h4 class="text-color-secondary font-medium md:text-2xl text-lg">Gestão e Monitoramento de Recursos Hídricos
+        <img [src]="img" alt="icone-desafio" class="md:size-24 size-16">
+        <h4 class="text-color-secondary font-medium md:text-2xl text-lg">{{title}}
         </h4>
     </div>
     <ul class="text-justify md:text-base text-sm mt-5">
+
+        @for (item of options; track $index) {
         <li>
-            Tecnologias e automação de sistemas irrigados por meio de soluções que visam melhorar a eficiência e
-            eficácia na
-            utilização dos recursos hídricos.
+            {{item}}
         </li>
-        <li>
-            Novas tecnologias relacionadas ao tema deste item.
-        </li>
+        }
+
     </ul>
 </div>

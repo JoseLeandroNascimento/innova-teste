@@ -2,7 +2,7 @@
     <h3 class="text-color-success font-bold md:text-3xl text-xl text-center">CRONOGRAMA</h3>
     <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-10 px-8">
 
-        @for (item of desafios; track $index) {
+        @for (item of cronogramas; track $index) {
         <app-cronograma-card [description]="item.description" [startDate]="item.startDate"
             [endDate]="item.endDate"></app-cronograma-card>
         }

@@ -1,5 +1,5 @@
 
-export interface desafioResponse {
+export interface CronogramaResponse {
 
     startDate: Date,
     endDate?: Date,

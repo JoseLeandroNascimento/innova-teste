@@ -3,21 +3,79 @@
     <h3 class="text-color-secondary font-bold md:text-3xl text-xl text-center">FAÇA SUA INSCRIÇÃO</h3>
 
     <div class="flex justify-center items-center mt-10">
-        <form class="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-6 gap-3 md:w-1/2 w-full">
-            <input class="border h-14 h-14 px-2.5 py-2" type="text" placeholder="Nome">
-            <input class="border h-14 px-2.5 py-2" type="text" placeholder="Sobrenome">
-            <input class="border h-14 px-2.5 py-2" type="email" placeholder="Email">
-            <input class="border h-14 px-2.5 py-2" type="tel" mask="(00) 0 0000-0000" placeholder="Telefone">
-            <input class="border h-14 px-2.5 py-2" type="text" mask="00000-000" placeholder="CEP">
-            <input class="border h-14 px-2.5 py-2" type="text" placeholder="Endereço">
-            <input class="border h-14 px-2.5 py-2" type="text" placeholder="Bairro">
-            <input class="border h-14 px-2.5 py-2" type="text" placeholder="Complemento">
-            <select class="border h-14 px-2.5 py-2 text-slate-700" name="" id="">
-                <option class="" [value]="null">Cidade</option>
-            </select>
-            <select class="border h-14 px-2.5 py-2" name="" id="">
-                <option [value]="null">Estado</option>
-            </select>
+
+        <form [formGroup]="form" class="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-6 gap-3 md:w-1/2 w-full"
+            (ngSubmit)="save()">
+
+            <div class="flex flex-col">
+                <input class="border h-14 h-14 px-2.5 py-2" formControlName="nome" type="text" placeholder="Nome">
+                <app-error-message [control]="form.controls.nome"
+                    [customErrors]="FormMessageErroCustom['nome']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="text" formControlName="sobrenome" placeholder="Sobrenome">
+                <app-error-message [control]="form.controls.sobrenome"
+                    [customErrors]="FormMessageErroCustom['sobrenome']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="email" formControlName="email" placeholder="Email">
+                <app-error-message [control]="form.controls.email"
+                    [customErrors]="FormMessageErroCustom['email']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="tel" mask="(00) 0 0000-0000" formControlName="telefone"
+                    placeholder="Telefone">
+                <app-error-message [control]="form.controls.telefone"
+                    [customErrors]="FormMessageErroCustom['telefone']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="text" mask="00000-000" formControlName="cep"
+                    placeholder="CEP">
+                <app-error-message [control]="form.controls.cep"
+                    [customErrors]="FormMessageErroCustom['cep']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="text" formControlName="endereco" placeholder="Endereço">
+                <app-error-message [control]="form.controls.endereco"
+                    [customErrors]="FormMessageErroCustom['endereco']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="text" formControlName="bairro" placeholder="Bairro">
+                <app-error-message [control]="form.controls.bairro"
+                    [customErrors]="FormMessageErroCustom['bairro']"></app-error-message>
+            </div>
+            <div class="flex flex-col">
+                <input class="border h-14 px-2.5 py-2" type="text" formControlName="complemento"
+                    placeholder="Complemento">
+                <app-error-message [control]="form.controls.complemento"
+                    [customErrors]="FormMessageErroCustom['complemento']"></app-error-message>
+            </div>
+
+            <div class="flex flex-col">
+                <select class="border h-14 px-2.5 py-2" formControlName="idEstado">
+                    <option [value]="null">Estado</option>
+                    @for (item of estadosOptions$ | async; track $index) {
+                    <option [value]="item.id">{{item.nome}}</option>
+                    }
+                </select>
+                <app-error-message [control]="form.controls.idEstado"
+                    [customErrors]="FormMessageErroCustom['estado']"></app-error-message>
+            </div>
+
+            <div class="flex flex-col">
+                <select class="border h-14 px-2.5 py-2 text-slate-700" formControlName="idCidade">
+                    <option [value]="null">Cidade</option>
+
+                    @for (item of municipioOptions$ | async; track $index) {
+                    <option [value]="item.id">{{item.nome}}</option>
+
+                    }
+                </select>
+                <app-error-message [control]="form.controls.idCidade"
+                    [customErrors]="FormMessageErroCustom['cidade']"></app-error-message>
+
+            </div>
+
             <button app-button typeButton="btn-success" class="h-14">ENVIAR</button>
         </form>
     </div>
